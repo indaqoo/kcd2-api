@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<kcd_mod>
+    <info>
+        <name>KCD API</name>
+        <modid>kcd_api</modid>
+        <description>Kingdom Come Deliverance - Public API</description>
+        <author>IndaQ</author>
+        <version>0.1</version>
+        <created_on>2025-02-07T22:42:55-05:00</created_on>
+    </info>
+</kcd_mod>

@@ -9,11 +9,14 @@ function PlayerActions:Initialize()
             original_OnAction(self, action, activation, value)
         end
 
-        if action == "jump" and activation == "press" then
-            KCDAPI.EventManager:TriggerEvent("KCDAPI:Player:OnJump", self, action, activation, value)
-        end
+        KCDAPI.EventManager.TriggerEvent("Player:OnAction", self, action, activation, value)
 
+        -- Trigger a specific event for jump actions
+        if action == "jump" and activation == "press" then
+            KCDAPI.EventManager.TriggerEvent("Player:OnJump", self, action, activation, value)
+        end
     end
 
-    KCDAPI:Log("Player action handler registered successfully!")
+    -- Log success
+    KCDAPI.Log("Player action handler registered successfully!")
 end
